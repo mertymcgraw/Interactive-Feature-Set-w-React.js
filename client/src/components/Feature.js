@@ -5,15 +5,25 @@ import '../styles/Feature.css';
 class Feature extends Component {
   constructor(){
     super();
-    this.hasSubfeatures = this.hasSubfeatures.bind(this);
+    this.state = {
+      showSubfeatures: false
+    };
+
+    this.renderSubfeatures = this.renderSubfeatures.bind(this);
+    this.handleClick = this.handleClick.bind(this);
   }
 
-  hasSubfeatures(){
+  renderSubfeatures(){
+    const {showSubfeatures} = this.state;
     if(this.props.details.subfeatures.length>0){
-      return (
-      < Subfeature />
-      )
+      this.setState({
+        showSubfeatures: !showSubfeatures
+      });
     }
+  }
+
+  handleClick(){
+
   }
 
   render(){
@@ -31,9 +41,9 @@ class Feature extends Component {
         <div className="feature-icon">
           <img  src={images[details.title]}/>
         </div>
-        <li className="feature-title">{details.title}</li>
-        <button className="delete-button" onClick={() => this.props.removeFeature(index)}> x </button>
-        <div>{this.hasSubfeatures()}</div>
+        <li className="feature-title" onClick={() =>this.renderSubfeatures()}>{details.title}</li>
+        {this.state.showSubfeatures ? <Subfeature /> : null}
+        <button className="delete-button" onClick={() => this.props.removeFeature(index)}> x </button> 
       </div>
       )   
   }
