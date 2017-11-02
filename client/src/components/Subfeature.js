@@ -4,7 +4,7 @@ class Subfeature extends Component {
   render(){
     return(
       <ul>
-        <p>This has a Subfeature</p>
+        <li>this is a subfeature item</li>
       </ul>
       )
   }
