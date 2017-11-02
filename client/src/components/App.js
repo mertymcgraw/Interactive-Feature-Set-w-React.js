@@ -24,7 +24,8 @@ class App extends Component {
     .catch(e => console.log(e))
   }
 
- removeFeature(details, index){
+ removeFeature(index){
+  console.log(index)
   const features = [...this.state.features];
   features.splice(index, 1);
   this.setState({ features });
