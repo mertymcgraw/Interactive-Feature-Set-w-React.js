@@ -1,12 +1,14 @@
 import React, { Component } from 'react';
 import SubfeatureList from './SubfeatureList';
+import AddRemoveButton from './AddRemoveButton';
 import '../styles/Feature.css';
 
 class Feature extends Component {
-  constructor(){
-    super();
+  constructor(props){
+    super(props);
     this.state = {
-      showSubfeatures: false
+      showSubfeatures: false,
+      available: this.props.details.presence
     };
 
     this.renderSubfeatures = this.renderSubfeatures.bind(this);
@@ -35,9 +37,9 @@ class Feature extends Component {
         <div className="feature-icon">
           <img  src={images[details.title]}/>
         </div>
-         <button className="delete-button" onClick={() => this.props.removeFeature(index)}> x </button> 
-        <li className="feature-title" onClick={() =>this.renderSubfeatures()}>{details.title}</li>
-        {this.state.showSubfeatures ? <SubfeatureList subfeatures={details.subfeatures}/> : null}
+         <AddRemoveButton presence={details.presence}/>
+        <li className="unavailable" className="feature-title" onClick={() =>this.renderSubfeatures()}>{details.title}</li>
+        {this.state.showSubfeatures ? <div className="subfeatures"><SubfeatureList subfeatures={details.subfeatures}/></div> : null}
       </div>
       )   
   }

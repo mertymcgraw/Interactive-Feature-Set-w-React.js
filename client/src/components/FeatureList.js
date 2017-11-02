@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import Feature from './Feature';
 
-import '../styles/FeatureList.css';
+import '../styles/Feature.css';
 
 class FeatureList extends Component{
   render(){

@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import Subfeature from './Subfeature';
+
 import Feature from './Feature';
 
 class SubfeatureList extends Component {

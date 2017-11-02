@@ -1,10 +1,25 @@
-.feature-container{
- /* width: 40%;
+
+.main-feature-container{
+  width: 40%;
   min-width: 320px;
   margin: auto;
   color: #5C5B5C;
   border-bottom: 1px solid #9B9B9B;
-  padding: 10px*/;
+  padding: 10px;
+
+}
+
+.subfeatures .feature-container{
+
+  margin-top: -15px;
+  font-style: italic;
+  vertical-align: top;
+}
+
+.subfeatures{
+  padding: 0px;
+  margin-bottom: -10px;
+  padding: 0px;
 }
 
 .feature-icon{
@@ -20,13 +35,17 @@
   list-style: none;
   display: inline-block;
   vertical-align: top;
-  margin-top: 10px;
+  margin-top: 12px;
   margin-left: 10%;
-  font-size: 14pt;
-
+  font-size: 12pt;
 }
 
-.delete-button{
+
+.subfeatures .feature-title{
+  font-size: 10pt;
+}
+
+.button{
   color: #5C5B5C;
   display: inline-block;
   vertical-align: top;
@@ -35,8 +54,18 @@
   background: none;
 }
 
-.delete-button:hover{
-  color: red;
+#delete-button:hover{
+  color: white;
+  background-color: #C92D40;
+  border: 1px solid #C92D40;
+  border-radius: 10px;
+}
+
+#add-button:hover{
+  color: white;
+  background-color: #43B36D;
+  border: 1px solid #43B36D;
+  border-radius: 10px;
 }
 
 .feature-title:hover{
