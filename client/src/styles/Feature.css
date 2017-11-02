@@ -1,0 +1,41 @@
+.feature-container{
+  width: 40%;
+  min-width: 320px;
+  margin: auto;
+  color: #5C5B5C;
+  border-bottom: 1px solid #9B9B9B;
+  padding: 10px;
+}
+
+.feature-icon{
+  display: inline-block;
+  width: 40px;
+  height: 40px;
+  overflow: hidden;
+
+
+}
+
+.feature-title{
+  list-style: none;
+  display: inline-block;
+  vertical-align: top;
+  margin-top: 10px;
+  margin-left: 10%;
+  font-size: 14pt;
+
+}
+
+.delete-button{
+  color: #5C5B5C;
+  display: inline-block;
+  vertical-align: top;
+  float: right;
+  border: none;
+  background: none;
+}
+
+.delete-button:hover{
+  color: red;
+}
+
