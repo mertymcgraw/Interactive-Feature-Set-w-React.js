@@ -17,3 +17,6 @@ Given a static dataset (JSON) of camp Features, design and implement a feature s
 ## How to run it
 `$ rails start`
 
+---
+## Demo
+![DEMO](https://user-images.githubusercontent.com/24868128/32393994-dc2e3c6c-c098-11e7-8f3b-b60f3b10bcfe.gif)
