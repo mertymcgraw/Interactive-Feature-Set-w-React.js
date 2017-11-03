@@ -4,4 +4,9 @@ class FeaturesController < ApplicationController
     
     render json: @features
   end 
+
+  def update
+  
+  end 
+
 end

@@ -1,24 +1,19 @@
 # README
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+----
+## Assignment: Merty McGraw
+Given a static dataset (JSON) of camp Features, design and implement a feature set page that displays all features, sub-features of a campsite, and their respective availability. Sub-features are revealed upon click of the primary feature. Availability can be toggled upon click of a button next to the feature.
 
-Things you may want to cover:
+----
+## Assumptions
+1. Sub-features can still be available even in the primary feature is not.
+2. Although this is a smaller scoped project, I implemented a Rails back end that would allow for future capabilities that relate to the persistence of the data.
 
-* Ruby version
+----
+## Technology
+* Rails API 
+* React front end 
 
-* System dependencies
+##How to run it
+`$ rails start`
 
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
