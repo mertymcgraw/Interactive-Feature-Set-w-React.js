@@ -42,6 +42,7 @@
 
 .unavailable {
   text-decoration: line-through;
+  color: #9B9B9B;
 }
 
 .subfeatures .feature-title{
@@ -57,14 +58,14 @@
   background: none;
 }
 
-#delete-button:hover{
+.delete-button:hover{
   color: white;
   background-color: #C92D40;
   border: 1px solid #C92D40;
   border-radius: 10px;
 }
 
-#add-button:hover{
+.add-button:hover{
   color: white;
   background-color: #43B36D;
   border: 1px solid #43B36D;

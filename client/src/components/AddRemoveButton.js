@@ -11,29 +11,37 @@ class AddRemoveButton extends Component{
 
     this.renderDeleteButton = this.renderDeleteButton.bind(this);
     this.renderAddButton = this.renderAddButton.bind(this);
+    this.updateAvailability = this.updateAvailability.bind(this);
   }
 
   toggleState(){
     const { isAvailable } = this.state;
+   
     this.setState({
       isAvailable: !isAvailable
     })
+   
   }
 
   renderDeleteButton(){
     return(
-      <button className="button" id="delete-button"> x </button>
+      <button className="button delete-button" onClick={() => this.updateAvailability()}> x </button>
       )
   }
 
   renderAddButton(){
     return(
-    <button className="button" id="add-button"> + </button>
+    <button className="button add-button" onClick={() => this.updateAvailability()}> + </button>
     )
   }
+
+  updateAvailability(){
+    this.toggleState();
+    this.props.editAvailability(this.props.index)
+  }
+
   render(){
     const { isAvailable } = this.state;
-
     return(
       <span>
       { isAvailable ? this.renderDeleteButton() : this.renderAddButton() }

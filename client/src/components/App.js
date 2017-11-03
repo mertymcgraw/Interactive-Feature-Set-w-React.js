@@ -9,6 +9,7 @@ class App extends Component {
     super();
 
     this.removeFeature = this.removeFeature.bind(this);
+    
 
     this.state = {
       features: []
@@ -16,26 +17,29 @@ class App extends Component {
 
   };
 
- componentWillMount(){
-  axios.get('http://localhost:3001/')
-    .then((response) => {
-      this.setState({features: response.data})
-    })
-    .catch(e => console.log(e))
+  componentWillMount(){
+    axios.get('http://localhost:3001/')
+      .then((response) => {
+        this.setState({features: response.data})
+      })
+      .catch(e => console.log(e))
   }
 
- removeFeature(index){
-  console.log(index)
-  const features = [...this.state.features];
-  features.splice(index, 1);
-  this.setState({ features });
+
+  removeFeature(index){
+    console.log(index)
+    const features = [...this.state.features];
+    features.splice(index, 1);
+    this.setState({ features });
   }
+
+  
 
   render() {
     
     return (
       <div className="App">
-        <FeatureList features={this.state.features} removeFeature={this.removeFeature}/>
+        <FeatureList features={this.state.features} removeFeature={this.removeFeature} />
       </div>
     );
   }

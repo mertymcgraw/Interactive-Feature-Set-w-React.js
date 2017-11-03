@@ -8,11 +8,20 @@ class Feature extends Component {
   constructor(props){
     super(props);
     this.state = {
+      details: this.props.details,
       showSubfeatures: false,
       available: this.props.details.presence
     };
 
+    this.editAvailability = this.editAvailability.bind(this);
     this.renderSubfeatures = this.renderSubfeatures.bind(this);
+  }
+
+  editAvailability(index, presence){
+    const updated_details = this.state.details
+    updated_details.presence = !this.state.details.presence
+    this.setState({details: updated_details})
+
   }
 
   renderSubfeatures(){
@@ -33,8 +42,6 @@ class Feature extends Component {
       "Pets allowed": "/pets.png"
     }
 
-
-
     const { details, index } = this.props
     const availbility = details.presence ? 'active' : 'unavailable'
     return (
@@ -42,7 +49,7 @@ class Feature extends Component {
         <div className="feature-icon">
           <img  src={images[details.title]}/>
         </div>
-         <AddRemoveButton presence={details.presence}/>
+         <AddRemoveButton index={index} presence={details.presence} editAvailability={this.editAvailability}/>
         <li className={`feature-title ${availbility}`} onClick={() =>this.renderSubfeatures()}>{details.title}</li>
         {this.state.showSubfeatures ? <div className="subfeatures"><SubfeatureList subfeatures={details.subfeatures}/></div> : null}
       </div>
