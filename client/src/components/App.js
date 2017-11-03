@@ -7,11 +7,9 @@ import '../styles/App.css';
 class App extends Component {
   constructor(){
     super();
-    
     this.state = {
       features: []
     }
-
   };
 
   componentWillMount(){
@@ -21,7 +19,6 @@ class App extends Component {
       })
       .catch(e => console.log(e))
   }
-
 
   render() {
     
