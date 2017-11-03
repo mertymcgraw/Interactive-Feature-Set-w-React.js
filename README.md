@@ -14,6 +14,6 @@ Given a static dataset (JSON) of camp Features, design and implement a feature s
 * Rails API 
 * React front end 
 
-##How to run it
+## How to run it
 `$ rails start`
 
