@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import SubfeatureList from './SubfeatureList';
 import AddRemoveButton from './AddRemoveButton';
+
 import '../styles/Feature.css';
 
 class Feature extends Component {
@@ -31,14 +32,18 @@ class Feature extends Component {
       "Shower": "/shower.png", 
       "Pets allowed": "/pets.png"
     }
+
+
+
     const { details, index } = this.props
+    const availbility = details.presence ? 'active' : 'unavailable'
     return (
       <div className="feature-container">
         <div className="feature-icon">
           <img  src={images[details.title]}/>
         </div>
          <AddRemoveButton presence={details.presence}/>
-        <li className="unavailable" className="feature-title" onClick={() =>this.renderSubfeatures()}>{details.title}</li>
+        <li className={`feature-title ${availbility}`} onClick={() =>this.renderSubfeatures()}>{details.title}</li>
         {this.state.showSubfeatures ? <div className="subfeatures"><SubfeatureList subfeatures={details.subfeatures}/></div> : null}
       </div>
       )   

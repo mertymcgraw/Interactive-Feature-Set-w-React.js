@@ -40,6 +40,9 @@
   font-size: 12pt;
 }
 
+.unavailable {
+  text-decoration: line-through;
+}
 
 .subfeatures .feature-title{
   font-size: 10pt;
