@@ -7,10 +7,7 @@ import '../styles/App.css';
 class App extends Component {
   constructor(){
     super();
-
-    this.removeFeature = this.removeFeature.bind(this);
     
-
     this.state = {
       features: []
     }
@@ -26,20 +23,11 @@ class App extends Component {
   }
 
 
-  removeFeature(index){
-    console.log(index)
-    const features = [...this.state.features];
-    features.splice(index, 1);
-    this.setState({ features });
-  }
-
-  
-
   render() {
     
     return (
       <div className="App">
-        <FeatureList features={this.state.features} removeFeature={this.removeFeature} />
+        <FeatureList features={this.state.features} removeFeature={this.removeFeature}/>
       </div>
     );
   }

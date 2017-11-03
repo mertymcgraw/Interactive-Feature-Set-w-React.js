@@ -21,7 +21,6 @@ class Feature extends Component {
     const updated_details = this.state.details
     updated_details.presence = !this.state.details.presence
     this.setState({details: updated_details})
-
   }
 
   renderSubfeatures(){
